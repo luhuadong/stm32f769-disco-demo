@@ -25,8 +25,8 @@ def main():
     # 2. 绑定本地信息
     udp_socket.bind(('', port))
 
-    cnt = 10
-    loop = 5
+    cnt = 100
+    loop = 4
     print("send %d...", cnt*loop)
 
     # 3. 接收发送的数据
@@ -46,7 +46,8 @@ def main():
         #data = recv_data.decode('utf-8')
         #print('0x%x'%data)
         cnt = cnt - 1
-        time.sleep(0.01)
+        time.sleep(0.005)
+        print("")
 
     print("finished")
 
